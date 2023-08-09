@@ -1,0 +1,13 @@
+# max Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-service
+spec:
+  selector:
+    app: max
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: NodePort  # Change to LoadBalancer or Ingress for production use
