@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // Check out your source code from GitHub
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Snip3rsh3ll/hsptlmgm.git', credentialsId: 'github-credentials']]])
-            }
-        }
+    //stages {
+    //    stage('Checkout') {
+    //        steps {
+    //            // Check out your source code from GitHub
+    //            checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Snip3rsh3ll/hsptlmgm.git', credentialsId: 'github-credentials']]])
+    //        }
+    //    }
 
         stage('Build Docker Images') {
             steps {
